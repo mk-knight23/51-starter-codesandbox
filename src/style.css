@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-dev-bg text-slate-100 font-sans selection:bg-dev-primary selection:text-white antialiased;
+  margin: 0;
+  display: block;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.glass-card {
+  @apply bg-dev-card/50 backdrop-blur-xl border border-dev-border rounded-2xl shadow-2xl;
+}
+
+#app {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.gradient-border {
+  position: relative;
+}
+.gradient-border::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(to bottom right, #0ea5e9, #c084fc);
+  border-radius: inherit;
+  z-index: -1;
+}
