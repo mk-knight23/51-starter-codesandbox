@@ -2,38 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  color-scheme: dark;
+@layer base {
+  :root {
+    color-scheme: light dark;
+  }
+
+  body {
+    @apply font-sans selection:bg-dev-primary selection:text-white antialiased;
+    margin: 0;
+    display: block;
+  }
+
+  .light body {
+    @apply bg-slate-50 text-slate-900;
+  }
 }
 
-body {
-  @apply bg-dev-bg text-slate-100 font-sans selection:bg-dev-primary selection:text-white antialiased;
-  margin: 0;
-  display: block;
+@layer components {
+  .glass-card {
+    @apply backdrop-blur-xl border shadow-2xl rounded-2xl;
+    background-color: rgba(18, 18, 24, 0.5);
+    border-color: rgba(31, 31, 39, 1);
+  }
+
+  .light .glass-card {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-color: #e2e8f0;
+  }
 }
 
 .font-mono {
   font-family: 'JetBrains Mono', monospace;
 }
 
-.glass-card {
-  @apply bg-dev-card/50 backdrop-blur-xl border border-dev-border rounded-2xl shadow-2xl;
-}
-
 #app {
   max-width: none;
   margin: 0;
   padding: 0;
-}
-
-.gradient-border {
-  position: relative;
-}
-.gradient-border::after {
-  content: '';
-  position: absolute;
-  inset: -1px;
-  background: linear-gradient(to bottom right, #0ea5e9, #c084fc);
-  border-radius: inherit;
-  z-index: -1;
 }
