@@ -11,16 +11,31 @@
     @apply font-sans selection:bg-dev-primary selection:text-white antialiased;
     margin: 0;
     display: block;
+    background-color: #f8fafc;
+    color: #0f172a;
+  }
+
+  .dark body {
+    @apply bg-dev-bg text-white;
   }
 
   .light body {
     @apply bg-slate-50 text-slate-900;
+  }
+
+  kbd {
+    @apply px-2 py-1 text-xs font-mono bg-slate-200 dark:bg-slate-700 rounded;
   }
 }
 
 @layer components {
   .glass-card {
     @apply backdrop-blur-xl border shadow-2xl rounded-2xl;
+    background-color: rgba(18, 18, 24, 0.5);
+    border-color: rgba(31, 31, 39, 1);
+  }
+
+  .dark .glass-card {
     background-color: rgba(18, 18, 24, 0.5);
     border-color: rgba(31, 31, 39, 1);
   }
