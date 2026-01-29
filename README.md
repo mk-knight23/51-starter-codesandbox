@@ -1,4 +1,4 @@
-# SandboxKit - Professional Vue 3 Starter
+# SYSTEM.HUD | Vue 3 Sci-Fi Interface Starter
 
 <div align="center">
 
@@ -7,85 +7,42 @@
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-**A high-fidelity, modular developer playground and starter kit built with Vue 3, TypeScript, and Tailwind CSS**
+**A futuristic sci-fi HUD-style interface starter kit built with Vue 3, TypeScript, and Tailwind CSS v4**
 
-[Live Demo](https://sandboxkit.vercel.app) | [GitHub](https://github.com/mk-knight23/54-CodeSandbox-Starter-Kit)
+[Live Demo](#) | [GitHub](#)
 
 </div>
 
 ---
 
-## Overview
+## Theme: Futuristic / Sci-Fi HUD
 
-SandboxKit provides a production-ready foundation for new projects. It replaces generic templates with an opinionated environment focusing on developer experience (DX), performance, and modularity.
-
-### Problem Statement
-
-Legacy starter kits often suffer from:
-- Outdated tooling and dependencies
-- No standardized architecture
-- Poor developer experience
-- Limited theming support
-
-### Solution
-
-SandboxKit provides:
-- **Modern Tooling**: Vite 6 + Vue 3.5+ with Composition API
-- **Theme System**: Dark/Light mode with persistence
-- **Type Safety**: Full TypeScript strict mode
-- **Developer Experience**: Mock terminal UI and instant feedback
-
----
-
-## Features Comparison
-
-| Feature | Legacy Version | SandboxKit (v2.0) |
-| :--- | :--- | :--- |
-| **Framework** | Vue 2/3 Basic | **Vue 3.5+ (Composition API)** |
-| **Tooling** | Standard Vite | **Vite 6 + TS Optimized Pipeline** |
-| **Theme** | Dark only | **Dark + Light mode with persistence** |
-| **Icons** | Basic | **Lucide Vue with dark/light variants** |
-| **Accessibility** | Minimal | **ARIA labels, keyboard navigation** |
-| **State** | None | **VueUse composables ready** |
+This starter kit features a cyberpunk-inspired heads-up display aesthetic with:
+- **Cyan neon color palette** (`#00f0ff`) as primary accent
+- **Glassmorphism panels** with backdrop blur and subtle borders
+- **Animated scanlines** and grid overlays
+- **Data visualization** components (metrics, progress bars, status indicators)
+- **Monospace typography** for technical feel
+- **Glow effects** and hover interactions
 
 ---
 
 ## Tech Stack
 
-- **Framework**: Vue 3.5+ (Script Setup)
-- **Build Tool**: Vite 6
-- **Styling**: Tailwind CSS 3.4
+- **Framework**: Vue 3.5+ (Composition API)
+- **Build Tool**: Vite 7
+- **Styling**: Tailwind CSS v4
+- **State**: Pinia 3.x
+- **Routing**: Vue Router 4.x
 - **Utilities**: @vueuse/core
-- **Icons**: Lucide Vue
+- **Icons**: Lucide Vue Next
 - **TypeScript**: 5.9+ with strict mode
 
 ---
 
-## Architecture
-
-```
-src/
-├── App.vue                 # Root component with theme
-├── main.ts                 # App entry point
-└── style.css               # Global styles & theme
-```
-
----
-
-## Getting Started
-
-### Prerequisites
-
-- Node.js 20.x or higher
-- npm 10.x or higher
-
-### Installation
+## Quick Start
 
 ```bash
-# Clone the repository
-git clone https://github.com/mk-knight23/54-CodeSandbox-Starter-Kit.git
-cd 54-CodeSandbox-Starter-Kit
-
 # Install dependencies
 npm install
 
@@ -96,72 +53,87 @@ npm run dev
 npm run build
 ```
 
-### Development
+---
 
-```bash
-npm run dev
+## HUD Theme Components
+
+### Color Palette
+
+| Token | Value | Usage |
+|-------|-------|-------|
+| `--color-hud-cyan` | `#00f0ff` | Primary accent, text glow |
+| `--color-hud-cyan-dim` | `#00a0b0` | Secondary text, labels |
+| `--color-hud-blue` | `#0066ff` | Secondary accent |
+| `--color-hud-purple` | `#a855f7` | Highlights, special metrics |
+| `--color-hud-green` | `#00ff88` | Status: online, success |
+| `--color-hud-orange` | `#ff6b00` | Status: warning |
+| `--color-hud-red` | `#ff3366` | Status: error |
+| `--color-hud-bg` | `#030814` | Background |
+| `--color-hud-panel` | `rgba(0, 20, 40, 0.7)` | Panel backgrounds |
+| `--color-hud-border` | `rgba(0, 240, 255, 0.2)` | Border accents |
+
+### Available Classes
+
+```css
+.hud-container       /* Main wrapper with scanline effect */
+.hud-panel           /* Glassmorphism card */
+.hud-button          /* Neon button with glow */
+.hud-card            /* Interactive card with hover effects */
+.hud-metric          /* Large metric display */
+.hud-label           /* Small monospace label */
+.hud-grid-overlay    /* Background grid pattern */
+.hud-scanline        /* Animated scanline effect */
 ```
 
-Starts the Vite development server with hot module replacement.
+### Animations
 
-### Production Build
-
-```bash
-npm run build
+```css
+.animate-hud-pulse   /* Subtle pulse effect */
+.animate-hud-scan    /* Vertical scanline */
+.animate-hud-glitch  /* Glitch effect on hover */
+.animate-hud-blink   /* Terminal cursor blink */
 ```
-
-Generates optimized production bundles.
 
 ---
 
-## Theme System
+## Project Structure
 
-SandboxKit includes a fully-featured dark/light mode with:
-
-- **System Detection**: Auto-detects OS preference
-- **Manual Toggle**: Switch via navbar button
-- **Persistence**: Preference saved in localStorage
-- **Smooth Transitions**: 300ms CSS transitions
-
----
-
-## Accessibility
-
-The starter kit includes comprehensive accessibility features:
-
-- **ARIA Labels**: All interactive elements labeled
-- **Keyboard Navigation**: Full keyboard support
-- **Focus States**: Visible focus indicators
-- **Color Contrast**: WCAG AA compliant
+```
+src/
+├── components/
+│   └── ui/
+│       └── SettingsPanel.vue
+├── composables/
+│   ├── useAudio.ts
+│   └── useKeyboardControls.ts
+├── stores/
+│   ├── settings.ts
+│   └── stats.ts
+├── utils/
+│   └── constants.ts
+├── App.vue           # Main HUD interface
+├── main.ts
+└── style.css         # Tailwind v4 + HUD theme
+```
 
 ---
 
 ## Deployment
 
-Compatible with any modern static hosting:
-
-- **Vercel**: `npx vercel --prod`
-- **Netlify**: Connect repository
-- **GitHub Pages**: `npm run preview` then deploy dist/
-
 ```bash
-# Deploy to Vercel
-npx vercel --prod --name sandboxkit
+# Build for production
+npm run build
 
 # Preview production build
 npm run preview
 ```
 
----
-
-## License
-
-MIT License - See [LICENSE](LICENSE) for details.
+Compatible with Vercel, Netlify, and GitHub Pages.
 
 ---
 
 <div align="center">
 
-**Built with Vue 3 + Vite + Tailwind CSS**
+**SYSTEM.HUD v2.0** // ALL SYSTEMS OPERATIONAL
 
 </div>
