@@ -9,7 +9,7 @@
 
 **A futuristic sci-fi HUD-style interface starter kit built with Vue 3, TypeScript, and Tailwind CSS v4**
 
-[Live Demo](#) | [GitHub](#)
+[Live Demo](https://sandboxkit.vercel.app) | [GitHub](https://github.com/mk-knight23/51-starter-codesandbox)
 
 </div>
 
@@ -119,6 +119,8 @@ src/
 ---
 
 ## Deployment
+
+Deployed to **Vercel** with zero-config. Push to main branch for automatic deployment.
 
 ```bash
 # Build for production
