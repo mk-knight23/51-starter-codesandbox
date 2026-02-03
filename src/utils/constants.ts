@@ -1,6 +1,10 @@
 export const STORAGE_KEYS = {
   SETTINGS: 'sandbox-settings',
-  STATS: 'sandbox-stats'
+  STATS: 'sandbox-stats',
+  PROJECTS: 'sandbox-projects',
+  TEMPLATES: 'sandbox-templates',
+  RECENT: 'sandbox-recent',
+  ANALYTICS: 'sandbox-analytics'
 } as const;
 
 export const KEYBOARD_SHORTCUTS = {

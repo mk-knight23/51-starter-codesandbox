@@ -1,0 +1,11 @@
+{
+  "infiniteLoopProtection": true,
+  "hardReloadOnChange": false,
+  "view": "browser",
+  "template": "vite",
+  "container": {
+    "port": 5173,
+    "node": "18"
+  },
+  "node": "18"
+}
