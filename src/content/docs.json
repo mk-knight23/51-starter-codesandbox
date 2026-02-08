@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Installation & Setup",
+    "description": "Learn how to install and set up your Vue 3 project",
+    "category": "getting-started",
+    "date": "2024-01-25",
+    "slug": "installation",
+    "section": "getting-started",
+    "order": 1,
+    "content": "Content for installation..."
+  }
+]

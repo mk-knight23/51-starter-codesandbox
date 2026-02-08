@@ -5,14 +5,22 @@
  * Welcome to your interactive Vue 3 learning playground.
  * Follow the numbered steps to master Vue fundamentals.
  */
-import { ref, computed, watch } from 'vue'
+import { ref, computed, watch, onMounted } from 'vue'
 import { Beaker, BookOpen, Github, ExternalLink } from 'lucide-vue-next'
 import CounterDemo from './components/playground/CounterDemo.vue'
 import TodoDemo from './components/playground/TodoDemo.vue'
 import ThemeDemo from './components/playground/ThemeDemo.vue'
 import InteractivePlayground from './components/playground/InteractivePlayground.vue'
+import ThemeToggle from './components/ThemeToggle.vue'
+import { useThemeStore } from './stores/theme'
 
 const currentStep = ref(1)
+const themeStore = useThemeStore()
+
+// Initialize theme on app mount
+onMounted(() => {
+  themeStore.initializeTheme()
+})
 
 const steps = [
   { id: 1, title: 'Reactive State', component: CounterDemo, gradient: 'step-gradient-1', icon: '01' },
@@ -91,6 +99,7 @@ if (import.meta.env.DEV) {
 
           <!-- Actions -->
           <div class="flex items-center gap-2">
+            <ThemeToggle />
             <a href="https://vuejs.org/guide/introduction.html" target="_blank" class="hidden sm:flex items-center gap-2 px-3 py-2 text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors">
               <BookOpen :size="16" />
               <span>Docs</span>
@@ -285,5 +294,5 @@ if (import.meta.env.DEV) {
 </template>
 
 <style>
-@import './style.css';
+@import './index.css';
 </style>

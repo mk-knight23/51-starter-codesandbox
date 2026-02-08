@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://vue3-playground.example.com/sitemap.xml
+
+# Crawl delay for large sites
+Crawl-delay: 1
+
+# Disallow specific paths
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+
+# Allow specific bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /

@@ -1,0 +1,24 @@
+[
+  {
+    "title": "Getting Started with Vue 3",
+    "description": "Learn the basics of Vue 3 and start building amazing applications",
+    "date": "2024-01-15",
+    "author": "Vue Team",
+    "category": "tutorial",
+    "tags": ["vue3", "beginners", "javascript"],
+    "image": "/images/vue3-hero.jpg",
+    "slug": "getting-started",
+    "content": "Content for getting started post..."
+  },
+  {
+    "title": "Mastering the Composition API",
+    "description": "Deep dive into Vue 3's Composition API and advanced patterns",
+    "date": "2024-01-20",
+    "author": "Vue Expert",
+    "category": "advanced",
+    "tags": ["vue3", "composition-api", "javascript", "patterns"],
+    "image": "/images/composition-api.jpg",
+    "slug": "composition-api",
+    "content": "Content for composition API post..."
+  }
+]
