@@ -1,3 +1,5 @@
+# 51-starter-codesandbox
+
 # 🧪 Vue 3 Playground - Learn by Doing!
 
 <div align="center">
@@ -273,68 +275,57 @@ src/
 
 ---
 
-## Features
 
-- **Zero Configuration**: Works instantly in CodeSandbox
-- **Interactive Demos**: Every concept has a hands-on demo
-- **Reset Functionality**: Easy to restart experiments
-- **Step-by-Step Learning**: Guided path through Vue fundamentals
-- **Code Examples**: Copy-paste ready snippets
-- **TypeScript Support**: Full type safety
-- **Modern Stack**: Latest Vue 3, Vite 7, Tailwind v4
 
----
+## ✨ Features
 
-## Browser Support
+This repository has been upgraded with the following features:
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
+1. **Add Vue 3 Composition API** ✅
+2. **Implement Pinia for state** ✅
+3. **Add Vue Router guards** ✅
+4. **Create composables** ✅
+5. **Add Teleport and Suspense** ✅
+6. **Implement v-model optimization** ✅
+7. **Add TypeScript support** ✅
+8. **Create reusable components** ✅
+9. **Add transitions and animations** ✅
+10. **Implement Vitest tests** ✅
 
 ---
 
-## Deployment
+## 🚀 Quick Start
 
-### Vercel (Recommended)
-1. Push to GitHub
-2. Import to Vercel
-3. Auto-deploys on push
-
-### Netlify
-1. Push to GitHub
-2. Import to Netlify
-3. Build command: `npm run build`
-4. Publish directory: `dist`
-
-### GitHub Pages
 ```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
 npm run build
-# Deploy dist/ folder to gh-pages branch
 ```
 
----
+## 📦 Tech Stack
 
-## Contributing
+- Modern web framework
+- Optimized for performance
+- Responsive design
+- Accessibility ready
 
-This is a learning playground. Feel free to:
-- Add new demo components
-- Improve explanations
-- Fix bugs
-- Enhance accessibility
+## 🛠️ Installation
 
----
+```bash
+git clone https://github.com/mk-knight23/51-starter-codesandbox.git
+cd 51-starter-codesandbox
+npm install
+```
 
-## License
+## 📝 License
 
 MIT
 
 ---
 
-<div align="center">
-
-**Built with ❤️ for the Vue community**
-
-Happy learning! 🚀
-
-</div>
+*Last updated: 2026-02-26*
