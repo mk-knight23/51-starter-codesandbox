@@ -5,6 +5,7 @@
   "description": "Interactive Vue 3 learning playground with hands-on tutorials",
   "type": "module",
   "scripts": {
+    "production": "npm run build && npm start",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
